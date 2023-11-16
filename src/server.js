@@ -3,7 +3,7 @@ const routes = require("./routes");
 
 const init = async () => {
   const server = hapi.server({
-    port: 9000,
+    port: 8000,
     host: "localhost",
     routes: {
       cors: {
@@ -12,8 +12,8 @@ const init = async () => {
     },
   });
 
-  server.route(routes)
-  
+  server.route(routes);
+
   await server.start();
   console.log(`berjalan di ${server.info.uri}`);
 };
